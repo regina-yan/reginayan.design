@@ -130,11 +130,26 @@
     letter-spacing: -0.02em;
     max-width: 900px;
     animation: fadeUp 0.9s 0.1s ease both;
+    margin-bottom: 20px;
   }
   
   .hero-headline em {
     font-style: italic;
     color: var(--ink-mid);
+  }
+  .hero-subline {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: var(--accent);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    max-width: 900px;
+    animation: fadeUp 0.9s 0.1s ease both;
+  }
+  
+  .hero-subline em {
+    font-style: italic;
   }
   
   .hero-bottom {
