@@ -263,7 +263,12 @@
     transition: color 0.2s;
   }
   .section-link:hover { color: var(--accent); }
-  
+  .container-icons{
+    margin-top: 20px;
+  }
+  .icon{
+    display:inline-block;vertical-align:middle;margin-left:6px;
+  }
   /* ---- CARDS GRID ---- */
   .cards-grid {
     display: grid;
