@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecting for Different Users — Regina Yan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Geist:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Regina Yan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link active">Work</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+  </nav>
+
+        <div class="case-hero">
+    <div class="case-hero-banner" style="background-image: url('assets/art-delaunay.png');">
+      <div class="case-hero-banner-inner">
+        <h1 class="case-title">Architecting for<br/><em>Different Users</em></h1>
+        <p class="case-summary">One clear persona — Third-Party Risk Manager — but two very different ways of working. Here's how we held a strong product opinion while building enough flexibility to serve both, without becoming a formless platform that served neither.</p>
+        <p class="case-banner-credit">Sonia Delaunay, <em>Flamenco Dancer</em>, 1916</p>
+      </div>
+    </div>
+    <div class="case-hero-meta">
+      <div class="case-meta-row">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Company</span>
+          <span class="case-meta-val">Clarative</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">Sole Designer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Scope</span>
+          <span class="case-meta-val">Product Architecture, UX</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Impact</span>
+          <span class="case-meta-val">Converted trial → paid across both user types</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="case-cover">
+    <img src="assets/clarative-risk.png" alt="Clarative Modularity" />
+  </div>
+
+  <div class="case-body">
+
+    <h2>The problem</h2>
+    <p>As we deepened our due diligence work, two distinct risk manager profiles emerged. 
+      <div class="case-stat-row-2">
+        <div class="case-stat">
+          <span class="case-stat-num">Avery</span>
+          <span class="case-stat-label">emerging risk program manager</span>
+          <p>“I'm just getting started building our risk program. I don't know what 'good' looks like yet, and I'm hoping Clarative can be my one-stop shop for risk and compliance.”</p>
+        </div>
+        <div class="case-stat">
+          <span class="case-stat-num">Zakiah</span>
+          <span class="case-stat-label">mature risk program manager</span>
+          <p>"I already have a mature risk program and existing tools. Due to overhead / change management, I can't replace everything with Clarative, but your AI-forward tools like Due Diligence Evidence Review are compelling on their own."</p>
+        </div>
+      </div></p>
+    <p>Avery was the cleaner design anchor. But Zakiah had more budget and represented stronger long-term growth. We couldn't design for one and ignore the other.</p>
+
+    <h2>The goal</h2>
+    <p>Design a due diligence suite that works as a fully interconnected workflow for Avery, while still delivering real standalone value for Zakiah — without the product feeling incoherent to either.</p>
+
+    <h2>Options considered</h2>
+    <p>We seriously evaluated three directions. A fully unified platform would have created the cleanest end-to-end experience for Avery but lacked the flexibility Zakiah required and carried real risk if the all-in-one workflow didn't resonate. Composable workflow blocks were flexible but threatened to turn Clarative into an orchestration platform — exactly what we didn't want to be, and deeply confusing for Avery who came to us for a clear definition of "what good looks like."</p>
+    <p>We landed on a <b>modular architecture:</b> a coherent full-suite experience customers could also use in pieces.</p>
+
+    <h2>Design decisions</h2>
+    <p>Modular architecture meant our data models and user-facing labels needed to be configurable enough for integrations while still feeling opinionated within our own platform. On the vendor table, for example, we allowed users to manage their own columns and views to accommodate different internal tagging systems — a small but meaningful flexibility that made Zakiah's integration path viable without cluttering Avery's experience.</p>
+
+    <img src="assets/clarative-vendors.png" alt="Column management UI" />
+
+    <p>For Avery specifically, we made sure out-of-the-box templates got them 95% of the way there - for example, we had common regulatory requirements baked into the product - since part of our value-add is providing a ready-made risk tool.</p>
+    <p>For Zakiah specifically, we designed thoughtful on and off ramps: easy data import from existing tools, configurable field labels to match internal terminology (vendor vs. supplier vs. service provider), and clean data export back into their stack. We also built a developer API portal to support bidirectional data flow, and allowed any configuration to be as complex as needed to suit their needs.</p>
+
+
+    <h2>What we learned</h2>
+    <p>The beauty of modular architecture is that we aren't enforcing a perfect system. We're creating enough structure to guide Avery, while leaving space for Avery & Zakiah to show us what the product needs to become.
+      <br/>
+      It was always fascinating what parts they would latch onto - for example, our AI document summarization and extraction features. We intentionally surfaced “chat with my documents” everywhere, then observed where users naturally reached for it. Their behavior guided where and how we more deeply and intentionally embedded AI chat into the workflow.</p>
+
+  </div>
+
+  <div class="case-nav">
+    <a href="case-study-due-diligence.html">← Actually Reinventing Due Diligence</a>
+    <a href="case-study-superdial.html">Next: Designing a Conversation →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="nav-logo">Regina Yan</span>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/reginayan/" target="_blank">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/designbyregina" target="_blank">Instagram ↗</a>
+      <a href="https://www.youtube.com/@reginayan" target="_blank">YouTube ↗</a>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

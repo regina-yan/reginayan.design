@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actually Reinventing Due Diligence — Regina Yan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Geist:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Regina Yan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link active">Work</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="case-hero">
+    <div class="case-hero-banner" style="background-image: url('assets/art-morisot.png');">
+      <div class="case-hero-banner-inner">
+        <h1 class="case-title">Actually Reinventing<br/><em>Due Diligence</em></h1>
+        <p class="case-summary">Vendor due diligence is one of the most painful parts of a risk manager's job — slow, manual, and often thankless. We designed an AI-forward workflow that turned weeks of work into hours, without sacrificing the accuracy that compliance demands.</p>
+        <p class="case-banner-credit">Berthe Morisot, <em>Plage de la Comtesse dans la Brume</em>, 1884</p>
+      </div>
+    </div>
+    <div class="case-hero-meta">
+      <div class="case-meta-row">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Company</span>
+          <span class="case-meta-val">Clarative</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">Founding Product Designer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Scope</span>
+          <span class="case-meta-val">End-to-end Design & Research</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Impact</span>
+          <span class="case-meta-val">Reduced due diligence time by 75%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-cover">
+    <img src="assets/clarative-ddq.png" alt="Clarative Due Diligence" />
+  </div>
+
+  <div class="case-body">
+
+    <h2>The problem</h2>
+    <p>Third-Party Risk Managers (TPRMs) are under-resourced and overworked. Their core job — reviewing vendor documentation against internal controls — is entirely manual, repetitive, and slow. Worse, the business often sees them as a bottleneck rather than a safeguard. They have difficulty proving their value when they're mostly asked to "observe and report."</p>
+    <p>Vendors aren't happy either. They fill out lengthy questionnaires, often incorrectly, leading to repeated back-and-forth that delays onboarding for everyone.</p>
+
+    <h2>The goal</h2>
+    <p>Design an AI-forward due diligence workflow that streamlines evidence review, maintains compliance-ready accuracy, and — critically — helps TPRMs prove their value to the business.</p>
+
+    <h2>Research</h2>
+    <p>Our research kickoff timing serendipitously overlapped with a Security & Third-Party Risk summit, which I attended on behalf of Clarative. My colleague (Head of Eng.) and I conducted dozens of lightning interviews at the conference, and followed-up with deep-dive interviews and mock-up feedback sessions after the conference.</p>
+    <p>I also conducted structured landscape analysis of existing due diligence tools, reviewing documentation, practitioner sentiment, and public demo videos to understand where the category was falling short.</p>
+    <p>After synthesizing everything, I ran a cross-functional design thinking session with engineering and GTM: empathy mapping, "How Might We" statements, and translating insights into product features.</p>
+
+    <div class="case-cover">
+      <img src="https://www.reginayan.me/assets/clarative-empathy-map.png" alt="Empathy mapping workshop" />
+      <p>Screenshot from a team-wide empathy mapping workshop</p>
+    </div>
+
+    <h2>Key insights</h2>
+    <p>Two insights shaped the entire design direction. First: vendors and TPRMs essentially view each other as obstacles — the questionnaire process is adversarial when it should be collaborative. Second: TPRMs don't need <em>more data</em>, they need <em>accurate data</em> from vendors who just want to speed through and get this process over with.</p>
+
+    <h2>What we built</h2>
+    <p>Rather than sending every vendor the same 100+ question form, we used AI to reduce the question set based on existing public information and document extraction — asking only what was actually missing. For vendors, AI pre-filled responses from uploaded documentation and flagged gaps before submission, dramatically reducing back-and-forth. For TPRMs, an AI-assisted assessment review surfaced first-pass risk findings with source citations — a detail that turned out to be critical for building trust in AI-generated outputs.</p>
+
+    <div class="case-cover">
+      <img src="assets/clarative-ddq.png" alt="Empathy mapping workshop" />
+      <p><b>Questionnaires,</b> where vendors fill out usage information with AI-suggested responses from documentation extraction to speed up the process</p>
+    </div>
+    <div class="case-cover">
+      <img src="assets/clarative-ddqreview.png" alt="Empathy mapping workshop" />
+      <p><b>Questionnaires Review,</b> where Clarative AI runs vendor responses against TPRM standards to alert the vendor of quick-fix mistakes (wrong document uploaded) or where the provided information is not sufficient so that by the time they submit, it's their "best and final" response (reduced back-and-forth).</p>
+    </div>
+    <div class="case-cover">
+      <img src="assets/clarative-assessmentreview.png" alt="Empathy mapping workshop" />
+      <p><b>Assessment Review,</b> where TPRMs review vendor evidence (documentation, questionnaire responses, etc.) and flag risk findings. They can see Clarative's first-pass assessment at whether a vendor's documentation/responses meet pass criteria, as well as source citations (something we learned is necessary to build AI trust).</p>
+    </div>
+
+    <div class="case-stat-row-2">
+      <div class="case-stat">
+        <span class="case-stat-num">75%</span>
+        <span class="case-stat-label">Reduction in Due Diligence Assessment Time</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-num">100%</span>
+        <span class="case-stat-label">Early adopter retention</span>
+      </div>
+    </div>
+
+    <h2>Rollout</h2>
+    <p>We ran weekly feedback sessions with early adopters and came prepared with clear goals for each meeting to ensure users could meaningfully test the product and fully experience the vision for how our tool would fit into their day-to-day processes.</p>
+
+    <h2>Reflection</h2>
+    <p>Implementing the Due Diligence module marked our first true deep dive into the third-party risk management space—an area I knew very little about going in. Gaining fluency in governance, risk, and compliance was honestly really challenging, but it pushed me to become much more rigorous in how I learn complex domains. What made the process rewarding was seeing that effort translate into meaningful customer impact. Hearing feedback like, “Clarative is worth it 100%… it gives you so much more time and scope to actually do the job properly,” and “It's a simple, graceful solution to quite a large problem,” feels really good and reinforced that we had succeeded in distilling a dense, high-stakes workflow into something intuitive and valuable.
+<br/><br/>
+    Looking back, I see opportunities where I could have developed a broader view of the landscape beyond direct user interviews (e.g. incorporating more market & regulatory analysis). At the same time, this project marked a shift in how I show up as a designer. I moved beyond executing quickly on mocks to leading cross-functional alignment, advocating for a clear user-centered vision, and thinking more from a product and leadership perspective. It strengthened my ability to guide teams through ambiguity and align around thoughtful, high-impact solutions.
+    
+    </p>
+
+  </div>
+
+  <div class="case-nav">
+    <a href="work.html">← All Work</a>
+    <a href="case-study-modularity.html">Next: Architecting for Different Users →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="nav-logo">Regina Yan</span>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/reginayan/" target="_blank">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/designbyregina" target="_blank">Instagram ↗</a>
+      <a href="https://www.youtube.com/@reginayan" target="_blank">YouTube ↗</a>
+    </div>
+  </footer>

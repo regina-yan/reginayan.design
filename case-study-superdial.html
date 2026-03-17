@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designing a Conversation — Regina Yan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Geist:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Regina Yan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link active">Work</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+  </nav>
+
+        <div class="case-hero">
+    <div class="case-hero-banner" style="background-image: url('assets/art-jackson.png');">
+      <div class="case-hero-banner-inner">
+        <h1 class="case-title">Designing a<br/><em>Conversation</em></h1>
+        <p class="case-summary">SuperDial's AI places automated calls to insurance companies on behalf of healthcare providers. But first, customers need to tell the AI what to ask. This is the story of designing a Script Builder that turned the complexity of human conversation into something anyone could configure.</p>
+        <p class="case-banner-credit">Suzanne Jackson, <em>Wind and Water</em>, 1975</p>
+      </div>
+    </div>
+    <div class="case-hero-meta">
+      <div class="case-meta-row">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Company</span>
+          <span class="case-meta-val">SuperDial</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">Sole Designer & Engineer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Scope</span>
+          <span class="case-meta-val">UX, Front-End Dev</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Shipped</span>
+          <span class="case-meta-val">Fall 2023</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="case-cover">
+    <img src="assets/superdial-script.png" alt="SuperDial Script Builder" />
+  </div>
+
+  <div class="case-body">
+
+    <h2>The problem</h2>
+    <p>To place an automated call, customers need to define what questions they want answered. The challenge: calls vary enormously in complexity, customers are non-technical ops teams who don't have time for involved setup, and whatever we built also needed to be legible to the AI that would actually conduct the call.</p>
+
+    <h2>Three directions, one right answer</h2>
+    <p>I explored three fundamentally different approaches before converging on a solution.</p>
+    <img src="https://www.reginayan.me/assets/superdial-casestudy2.png" alt="Decision model exploration" />
+
+    <p>The first was a node-based decision model that powerful, capable of handling highly complex branching logic, and... immediately too much. Ops teams flagged it would require dedicated support to implement, and the complex decision trees would actually constrain the AI when calls deviated from script. Verdict? Over-engineered.</p>
+
+    <br/>
+    <img src="https://www.reginayan.me/assets/superdial-casestudy3.png" alt="Answer checklist exploration" />
+    <p>The second flipped the approach entirely: users would only select what information they wanted captured, and the system would generate the questions internally. Cleaner for engineering, better for AI consistency — but customers hated losing visibility into what was actually being asked. Verdict? Too opaque.</p>
+
+    <br/>
+    <img src="https://www.reginayan.me/assets/superdial-casestudy4.png" alt="Final Script Builder design" />
+
+    <p>The third direction split the difference. A form-based Script Builder (familiar to anyone who's used Google Forms) that let teams define what questions to ask while keeping the interaction model simple. Enough structure for consistent data capture, flexible enough for different operational styles, and interpretable enough for the AI.</p>
+
+
+    <h2>Impact</h2>
+
+    <div class="case-stat-row-2">
+      <div class="case-stat">
+        <span class="case-stat-num">$1.8M</span>
+        <span class="case-stat-label">ARR Generated from Scripts in First Year of Launch</span>
+      </div>
+      <div class="case-stat">
+        <span class="case-stat-num">100%</span>
+        <span class="case-stat-label">Product Adoption</span>
+      </div>
+    </div>
+
+    <h2>Reflection</h2>
+    <p>We implemented v1 of our Script Builder in Fall 2023 and have continued iterating since. The Script Builder evolves as we gain greater clarity on use cases - for example, we've found that many customers want similar scripts, so we've created template "base" scripts that get you 70% of the way there. Our core design didn't box us into a corner, which has allowed us to easily adapt to changes. The Script Builder isn't some ground-breaking feature, but it manages to suit the complex needs of our customers while being easy to understand, and I'm quite happy with that.</p>
+
+  </div>
+
+  <div class="case-nav">
+    <a href="case-study-modularity.html">← Architecting for Different Users</a>
+    <a href="case-study-appian.html">Next: New User Comprehension →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="nav-logo">Regina Yan</span>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/reginayan/" target="_blank">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/designbyregina" target="_blank">Instagram ↗</a>
+      <a href="https://www.youtube.com/@reginayan" target="_blank">YouTube ↗</a>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
