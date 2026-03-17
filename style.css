@@ -692,11 +692,11 @@
   }
   .case-cover img {
     display: block;
-    width: 90%;
+    width: 90% !important;
     height: auto;
     border: 1px solid var(--rule);
     border-radius: 4px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
   .case-cover p {
     width: 90%;
