@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building AI Trust — Regina Yan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Geist:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Regina Yan</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="work.html" class="nav-link active">Work</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="case-hero">
+    <div class="case-hero-banner" style="background-image: url('assets/art-hicks.png');">
+      <div class="case-hero-banner-inner">
+        <h1 class="case-title">Building<br/><em>AI Trust</em></h1>
+        <p class="case-summary">Here's how I designed AI features to earn user trust in high-stakes regulated environments.</p>
+        <p class="case-banner-credit">Sheila Hicks, <em>Minime</em>, 2014</p>
+      </div>
+    </div>
+    <div class="case-hero-meta">
+      <div class="case-meta-row">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Company</span>
+          <span class="case-meta-val">Clarative</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-val">Founding Product Designer</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Scope</span>
+          <span class="case-meta-val">End-to-end Design & Research</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Impact</span>
+          <span class="case-meta-val">Achieved 100% AI adoption among users previous skeptical of AI tooling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-body">
+
+    <h2>The problem</h2>
+    <p>Third-party risk managers operate in one of the least forgiving environments in enterprise software — they're subject to global regulations, external audits, and the very real consequence that an error in their vendor assessments can expose their organization to financial, operational, or reputational harm. When we set out to bring AI into our due diligence platform, we knew that building trust with our integrated AI systems was key to user adoption. It's easy enough to automate high-volume, repetitive tasks — here's how I tackled the problem of building AI-integrated features that a risk manager could stake their reputation on.</p>
+
+    <h2>Starting with the user</h2>
+    <p>The instinct in a lot of AI product development is to optimize for automation, but that framing was backwards for our users. A risk manager who can't explain why they scored a vendor a certain way, or who can't point an auditor to a source, hasn't saved time. <b>Our user interviews were clear: what mattered most was control and insight into what the AI was doing, so they could have genuine confidence in the output.</b> That reframing drove my core design principles.</p>
+
+    <h2>Human-in-the-loop as the default, automation as the opt-in</h2>
+    <p>Out of the box, anything the AI drafts or pre-populates requires a human review before it's finalized. </p>
+
+    <div class="case-cover">
+        <img src="assets/clarative-assessmentstab.png" />
+        <p>Our Assessments page, where AI does a first pass before a user can review the assessment results</p>
+      </div>
+    
+    <p>However, we also knew that "review everything" isn't sustainable at scale for larger risk programs. So we built configurable workflows that let teams define when AI can act autonomously without requiring a manual review step each time, through our AI Risk Agents. The key condition: even in fully automated flows, there's always a visible log of what the AI Agent did versus what a human did.</p>
+    <p>This let our users test the platform, build confidence, and then selectively automate the parts of the workflow where they felt comfortable.</p>
+
+    <div class="case-cover">
+      <img src="assets/clarative-riskagent.png" />
+      <p>An example Risk Agent that users can use to automate workflows</p>
+    </div>
+
+    <h2>Showing our work with sources + reasoning</h2>
+    <p>Every AI suggestion comes with sources. If the AI is proposing a response to a vendor questionnaire or recommending an assessment score for a specific control, the user can see exactly what informed that output and pull up the source directly without leaving their workflow. I intentionally designed source review to be an extremely seamless interaction, and it was something our users universally called out as a differentiator.</p>
+
+    <div class="case-cover">
+        <img class="no-border" src="assets/clarative-citation.png" />
+        <p>An example of source citation</p>
+      </div>
+
+    <div class="case-pullquote">
+        <blockquote>The citations are a gamechanger, I like how I can immediately know where it (AI response) came from.</blockquote>
+        <cite>— Risk Manager at a global fintech, early adopter</cite>
+    </div>
+
+    <p>But we didn't stop at citations. We also surface the AI's reasoning with an explanation of why it reached a particular conclusion. For a risk manager preparing for an audit, there's a meaningful difference between "the AI marked this privacy control as "needs review"" and "the AI marked this privacy control as 'needs review' because the vendor provides a copy of a privacy policy, but it is unclear whether or not it covers the services being evaluated." The reasoning gives users something they can defend, and helps them decide whether they agree.</p>
+
+    <p>Together, sources and reasoning let users engage critically with AI outputs rather than just accept them, which built more durable confidence with our risk professionals over time.
+    </p>
+
+    <h2>When <em>not</em> to answer</h2>
+    <p>Another trust decisions I made was around what the AI does when it doesn't have a good answer. When the AI couldn't reach a defensible conclusion in the assessment review or the available evidence was inconclusive, it said so explicitly rather than surfacing a low-confidence answer - better to not answer than to be wrong! The field would remain flagged for human review, indicated by a grey color meaning "no AI answer."
+    </p>
+
+    <div class="case-cover">
+        <img class="no-border" src="assets/clarative-needsreview.png" />
+        <p>Our AI review states</p>
+      </div>
+
+
+    <p> For our users, this was actually reassuring. They could trust Clarative's answers precisely because they knew it wouldn't hallucinate one when it didn't have the evidence.</p>
+
+    <h2>Consistency as a trust foundation</h2>
+    <p>Underlying all of this was something less visible but just as important: the AI had to behave predictably. Users in regulated environments develop finely tuned instincts for when something feels off, and an AI that occasionally does something unexpected can erode confidence in the entire process.
+    </p>
+    <p>I treated consistency as a design requirement, which sometimes meant deliberately constraining how "smart" the AI could be. For our vendor questionnaires, for example, Clarative AI does a first-pass review to flag any responses that aren't up to par before submission. Rather than letting the AI produce freeform reasoning, we bucketed issues into specific, reliable categories. Instead of "your SOC 2 report is from 2025 instead of 2026," the output would be "Potentially expired document" - I was happy to sacrifice a little detail for consistency.</p>
+
+    <div class="case-cover">
+        <img class="no-border" src="assets/clarative-AI output.png">
+        <p>A snippet of our AI vendor questionnaire review screen</p>
+      </div>
+    
+    <h2>Takeaways</h2>
+    <p>This experience taught me that building an AI-forward product for regulated workflows is a fundamentally different design problem than building AI for general productivity. When speed is the goal, optimizing for automation makes sense. When trust is the goal, the job is to make users more capable, not more passive.
+    </p>
+    <p>When our risk managers could see the sources, understand the reasoning, and rely on the system to flag what it didn't know, they stopped treating AI as something to be suspicious of and started treating it as a tool they could actually use.</p>
+
+
+  </div>
+
+  <div class="case-nav">
+    <a href="work.html">← All Work</a>
+    <a href="case-study-modularity.html">Next: Architecting for Different Users →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="nav-logo">Regina Yan</span>
+      <p>© 2026. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/reginayan/" target="_blank">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/designbyregina" target="_blank">Instagram ↗</a>
+      <a href="https://www.youtube.com/@reginayan" target="_blank">YouTube ↗</a>
+    </div>
+  </footer>
