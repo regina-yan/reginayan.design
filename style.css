@@ -171,8 +171,55 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    margin-top: 1rem;
   }
-  
+  .painting-switcher {
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    gap:6px;align-items:
+    flex-start;width:220px;
+  }
+  .painting-label-artist{
+    font-family:'DM Mono',monospace;
+    font-size:0.65rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(26,24,20,0.5);
+    margin:0;
+    transition:opacity 0.4s ease;
+    width:100%
+  }
+  .painting-label-work{
+    font-family:'DM Mono',monospace;
+    font-size:0.65rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(26,24,20,0.35);
+    margin:0;
+    transition:opacity 0.4s ease;
+    width:100%;
+  }
+  .btn-painting{
+    background:rgba(250,248,245,0.7);
+    border:1px solid rgba(26,24,20,0.15);
+    border-radius:2px;
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:0.9rem;
+    color:rgba(26,24,20,0.6);
+    backdrop-filter:blur(8px);
+    transition:all 0.2s;
+  }
+  .painting-dots{
+    display:flex;
+    gap:6px;
+    align-items:center;
+  }
   /* ---- BUTTONS ---- */
   .btn {
     display: inline-flex;
@@ -941,7 +988,9 @@
     .hero {
       cursor: auto !important;
     }
-
+    .painting-switcher{
+      display: none;
+    }
 
     /* NAV */
     .nav {
