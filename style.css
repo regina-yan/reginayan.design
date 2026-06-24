@@ -344,6 +344,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
+  .rewards-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
 
   .reward-card {
     border: 1px solid var(--rule);
@@ -472,6 +477,116 @@
     color: var(--ink-mid);
     line-height: 1.7;
   }
+  .faq-list { border-top: 1px solid var(--rule); }
+  .faq-item { border-bottom: 1px solid var(--rule); }
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    text-align: left;
+  }
+  .faq-question-text {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .faq-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    color: var(--accent);
+  }
+  .faq-icon::before, .faq-icon::after {
+    content: '';
+    position: absolute;
+    background: currentColor;
+    border-radius: 1px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .faq-icon::before { width: 100%; height: 1.5px; top: 50%; left: 0; transform: translateY(-50%); }
+  .faq-icon::after  { width: 1.5px; height: 100%; left: 50%; top: 0; transform: translateX(-50%); }
+  .faq-item.open .faq-icon::after { transform: translateX(-50%) rotate(90deg); opacity: 0; }
+  .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.28s ease; }
+  .faq-item.open .faq-answer { grid-template-rows: 1fr; }
+  .faq-answer-inner { overflow: hidden; }
+  .faq-answer-inner p { font-size: 0.93rem; color: var(--ink-mid); line-height: 1.75; padding-bottom: 24px; max-width: 680px; }
+  .faq-answer-inner p + p { margin-top: 10px; }
+  .faq-answer-inner a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; transition: color 0.2s; }
+  .faq-answer-inner a:hover { color: var(--accent); }
+
+  .progress-amounts {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+  .progress-raised {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .progress-goal {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-light);
+    text-transform: uppercase;
+  }
+  .progress-track {
+    width: 100%;
+    height: 6px;
+    background: var(--rule);
+    border-radius: 99px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 99px;
+    width: 0%;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .progress-note {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .announce-banner {
+    background: var(--accent);
+    color: var(--ink);
+    text-align: center;
+    padding: 10px 24px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 101;
+  }
+  .announce-banner a {
+    color: var(--ink);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s;
+  }
+  .announce-banner a:hover {
+    opacity: 0.7;
+  }
+
   /* ---- BUTTONS ---- */
   .btn {
     display: inline-flex;
@@ -1235,7 +1350,8 @@
      ============================================ */
 
   @media (max-width: 768px) {
-
+    .donate-intro { grid-template-columns: 1fr; gap: 40px; }
+    .donate-hero-img { max-height: 260px; }
     /* Remove paintbrush cursor on mobile */
     .hero {
       cursor: auto !important;
@@ -1391,6 +1507,9 @@
     .rewards-grid {
       grid-template-columns: 1fr;
     }
+    .rewards-grid-2 {
+      grid-template-columns: 1fr;
+    }
     .state-cards-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1424,6 +1543,9 @@
       gap: 48px;
     }
     .rewards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .rewards-grid-2 {
       grid-template-columns: 1fr 1fr;
     }
     .state-cards-grid {
