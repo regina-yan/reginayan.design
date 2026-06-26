@@ -358,10 +358,6 @@
     transition: border-color 0.2s;
   }
 
-  .reward-card:hover {
-    border-color: var(--accent);
-  }
-
   .reward-card-imgs {
     background: var(--cream);
     display: flex;
