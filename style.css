@@ -1,20 +1,33 @@
-/* ============================================
-   PORTFOLIO — Refined Editorial Style
-   ============================================ */
+
+   @font-face {
+    font-family: 'Benditos';
+    src: url('assets/TAYBenditos.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Jelly Habit';
+    src: url('assets/TAYJellyHabitRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
    :root {
     --cream:     #f5f2ed;
     --paper:     #faf8f5;
     --ink:       #1a1814;
-    --ink-mid:   #4a4540;
-    --ink-light: #9a9088;
-    --accent:    #c9a96e;       /* warm gold */
+    --ink-mid:   #2e2821;
+    --ink-light: #a38f7f;
+    --accent:    #bb8219;       /* warm gold */
     --accent-soft: #e8d9be;
     --rule:      #ddd8d0;
   
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body:    'Geist', sans-serif;
-    --font-mono:    'DM Mono', monospace;
+    --font-display: 'Benditos', Georgia, serif;
+    --font-body:    'IBM Plex Mono', sans-serif;
+    --font-mono:    'Jelly Habit', monospace;
   
     --max-w: 1160px;
     --nav-h: 72px;
@@ -24,7 +37,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--paper);
+    background-color: var(--paper);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(26, 24, 20, 0.015),
+      rgba(26, 24, 20, 0.015) 1px,
+      transparent 1px,
+      transparent 5px
+    );
     color: var(--ink);
     font-family: var(--font-body);
     font-size: 16px;
@@ -124,11 +144,11 @@
   
   .hero-headline {
     font-family: var(--font-display);
-    font-size: clamp(2.4rem, 5.5vw, 5rem);
+    font-size: clamp(2.4rem, 6.5vw, 5rem);
     font-weight: 400;
     line-height: 1.08;
     letter-spacing: -0.02em;
-    max-width: 900px;
+    max-width: 700px;
     animation: fadeUp 0.9s 0.1s ease both;
     margin-bottom: 20px;
   }
@@ -267,10 +287,10 @@
   }
 
   .donate-steps h3 {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    /* letter-spacing: 0.16em; */
+    /* text-transform: uppercase; */
     color: var(--ink-light);
     margin-bottom: 28px;
   }
@@ -322,7 +342,7 @@
   }
 
   .donate-url {
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: 0.75rem;
     color: var(--accent);
     background: var(--paper);
@@ -533,7 +553,7 @@
     letter-spacing: -0.02em;
   }
   .progress-goal {
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: 0.72rem;
     letter-spacing: 0.1em;
     color: var(--ink-light);
@@ -673,10 +693,10 @@
   }
   
   .section-tag {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    /* letter-spacing: 0.16em; */
+    /* text-transform: uppercase; */
     color: var(--ink-light);
   }
   
@@ -734,9 +754,9 @@
   }
   .card-company {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.16em; */
+    /* text-transform: uppercase; */
     color: var(--accent);
     display: block;
     margin-bottom: 10px;
@@ -811,11 +831,26 @@
     max-width: var(--max-w);
     margin: 0 auto;
   }
+  .grain-section {
+    position: relative;
+    background-color: #F9F2E6;
+  }
+  
+  .grain-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 0.5 0 0.5 0 0.5 0 0.5 0.5'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 300px 300px;
+    opacity: 0.45;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
   .page-eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 2rem;
+    /* letter-spacing: 0.18em; */
+    /* text-transform: uppercase; */
     color: var(--ink-light);
     display: block;
     margin-bottom: 24px;
@@ -827,6 +862,9 @@
     line-height: 1.1;
     letter-spacing: -0.015em;
     max-width: 780px;
+  }
+  #about-page-title{
+    color: var(--accent);
   }
   .page-title em {
     font-style: italic;
@@ -849,16 +887,16 @@
     justify-content: space-between;
     margin-top: 14px;
     font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.1em; */
     color: var(--ink-light);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   .about-lead {
     font-family: var(--font-display);
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
     font-weight: 400;
-    line-height: 1.45;
+    /* line-height: 1; */
     margin-bottom: 28px;
   }
   .about-text p {
@@ -932,10 +970,10 @@
   }
   .timeline-date {
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
+    font-size: 1rem;
+    /* letter-spacing: 0.1em; */
     color: var(--ink-light);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     display: block;
     margin-bottom: 6px;
     padding-top: 4px;
@@ -996,9 +1034,9 @@
   }
   .work-card-company {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.16em; */
+    /* text-transform: uppercase; */
     color: var(--accent);
   }
   .work-card-year {
@@ -1008,7 +1046,7 @@
   }
   .work-card-title {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.2;
   }
@@ -1092,9 +1130,9 @@
   }
   .case-meta-label {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.16em; */
+    /* text-transform: uppercase; */
     color: var(--ink-light);
   }
   .case-meta-val {
@@ -1148,7 +1186,7 @@
     padding: 80px 48px;
   }
   .case-body h2 {
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-size: 1.6rem;
     font-weight: 600;
     margin: 56px 0 18px;
@@ -1246,9 +1284,9 @@
   }
   .case-stat-label {
     font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.12em; */
+    /* text-transform: uppercase; */
     color: var(--ink-light);
   }
   
